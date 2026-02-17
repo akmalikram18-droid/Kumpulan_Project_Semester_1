@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PRAKTIKUM 4</title>
+ <!--INTERNAL CSS-->
+ <style>body {
+     font-family: 'Segoe UI', Arial, sans-serif;
+     margin: 0;
+     background-color: #fcfeff;
+     color: #222;
+ }
+
+ /* HEADER */
+ header {
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 20px 0;
+ }
+
+ header h1 {
+     margin: 0;
+     font-size: 28px;
+ }
+
+ /* NAV */
+ nav {
+     background-color: #4f90c6;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+     margin: 0 15px;
+     font-weight: bold;
+ }
+
+ nav a:hover {
+     text-decoration: underline;
+ }
+
+ /* LAYOUT */
+ .container {
+     width: 90%;
+     max-width: 1100px;
+     margin: 20px auto;
+     overflow: auto;
+     
+ }
+
+ section {
+     float: left;
+     width: 68%;
+     background-color: white;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+ }
+
+ aside {
+     float: right;
+     width: 28%;
+     background-color: #cbdde9;
+     border: 1px solid #bbb;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+ }
+
+ h2 {
+     color: #355485;
+     margin-top: 0;
+ }
+
+ article img {
+     width: 100%;
+     border-radius: 6px;
+     margin-bottom: 10px;
+ }
+
+ /* TABEL DATA */
+ table {
+     border-collapse: collapse;
+     width: 100%;
+     margin: 12px 0;
+ }
+
+ th,
+ td {
+     border: 1px solid #ccc;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f1f5f9;
+ }
+
+ /* IFRAME */
+ iframe {
+     width: 100%;
+     height: 250px;
+     border: 1px solid #999;
+     border-radius: 6px;
+ }
+
+ /* FOOTER */
+ footer {
+     clear: both;
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 14px 0;
+     margin-top: 20px;
+ }
+
+ footer a {
+     color: #cbdde9;
+     text-decoration: none;
+ }
+
+ footer a:hover {
+     text-decoration: underline;
+ }
+
+ /* RESPONSIVE SEDIKIT */
+ @media (max-width: 768px) {
+
+     section,
+     aside {
+           float: none;
+           width: 100%;
+     }
+ }
+
+ </style>
+
+
+</head>
+<body>
+  
+  <!--HEADER-->
+  <header>
+   <h1>Portal Fulan — Berita Koding Lucu Tapi Keren💻😎</h1>
+   <p>"dimana bug bukan musuh,tapi guru kehidupan"</p>
+  </header>
+  
+  <!--NAVBAR-->
+  <nav>
+     <a href="#bu">Berita Utama</a>
+     <a href="fu">Fakta Unik</a>
+     <a href="vi">Video & Iframe</a>
+     <a href="kr">Kontak Redaksi</a>
+  </nav>
+ <article>
+  <div class="container">
+  <section id="bu">
+    <h2>
+      Fulan Tertangkap Basah Ngoding Jam 3 Pagi Untuk Push ke Github
+    </h2>
+    <img src="https://exampllee.vercel.app/assets/G05.gif" >
+    <p>
+      <b>Jakarta, Portal Fulan — </b>Warge sekitar dikejutkan dengan suara ketikan keyboard yang tak kunjung berhenti. Setelah diselidiki, ternyata sumber suara berasal dari kamar Fulan yang sedang men-deploy project-nya ke Vercel
+    </p>
+    <p>
+      'Aku cuma mau pastiin web-nya responsif sebelum tidur," ujar Fulan sambil menyeruput kopi dingin yang udah cair dari jam 10 malam.
+    </p>
+    <p>
+      Menurut pengakuan saksi, Fulan sudah tiga malam tidak tidur gara-gara memperbaiki error <code>vite-plugin-pwa missing.</code> Namun akhirnya, project berhasil jalan dan langsung mendapat 5 ⭐
+      di GitHub dari teman satu kos-nya.
+    </p>
+    
+    <h3> Fakta Koding Fulan:</h3>
+    <ul>
+      <li>Suka debugging ditemenin lagu rock</li>
+      <li>Pernah typo <i>console.log</i> jadi <i>consola.lag</i></li>
+      <li>setiap error diannggap "ujian cinta terhadap sintaks</li>
+    </ul>
+  <h3>Top 3 Error Yang Paling Sering Ditemui</h3>
+    <ol>
+      <li>Missing semicolo (;) setelah jam 2 pagi</li>
+      <li>Path image tidak kebaca di deploy</li>
+      <li>"Cannot read property'undefined' of undefined" — klasik!</li>
+    </ol>
+    <h3>Daftar Konsumsi Lembur Fulan</h3>
+    <table>
+      <tr>
+      <th>No</th>
+      <th>Menu</th>
+      <th>Jam Konsumsi</th>
+      <th>Status</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Kopi Tubruk</td>
+        <td>22:00</td>
+        <td>Habis</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mie Instan</td>
+        <td>00:30</td>
+        <td>Pending (kegigit error)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Roti Sobek</td>
+        <td>02:00</td>
+        <td>Belum Disentuh</td>
+      </tr>
+    </table>
+    <p>Dan inilah moto hidupnya:<p>
+      <blockquote>"kalau koding gagal,bukan berarti kamu gagal,mungkin cuman belum di save" </blockquote>
+      <h2>belajar HTML Langsung Dari Sumbernya</h2>
+      <p>
+        berikut cuplikan referensi situs belajar favorit Fulan:
+      </p>
+      <iframe src="https://www.petanikode.com/" title="situs belajar">
+      </iframe>
+  </section>
+ 
+ <!--ASIDE-->
+  <aside>
+    <h2>Fakta Unik Tentang Fulan</h2>
+   <ul>
+      <li>Ngoding pakai mode gelap padahal diang bolong</li>
+      <li>punya tujuh repository bernama <i>final-final-v3.</i></li>
+      <li>Pernah rename folder"fix-beneran-terakhir".</li>
+    </ul>
+    <h3>Jadwal Kegiatan Harian</h3>
+    <table>
+      <tr>
+      <th>Waktu</th>
+      <th>Kegitan</th>
+      </tr>
+      <tr>
+        <td>09:00</td>
+        <td>Kelas Pemweb</td>
+      </tr>
+      <tr>
+        <td>13:00</td>
+        <td>Ngopi sambil baca dokumentasi</td>
+      </tr> 
+      <tr>
+        <td>21:00</td>
+        <td>Debug sampai lupa waktu</td>
+      </tr>      
+    </table>
+  </aside>
+   </div>
+ </article>
+ 
+ <!--FOOTER-->
+  <footer>
+    <b>Hubungi Redaksi :</b><a href="mailto:akmalikram18@gmail.com">akmalikram18@gmail.com</a>
+    <p>
+      <a href="#top">Kembali Keatas</a>
+    </p>
+    <p>© 2025 Portal Fulan — Semua Bug Milik Bersama </p>
+  </footer>
+  
+
+</body>
+</html>
