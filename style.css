@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.5;
+}
+.side-header {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid #0ea5e9;
+}
+.side-header h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.side-header p {
+    font-size: 0.9rem;
+    font-weight: #fff;
+}
