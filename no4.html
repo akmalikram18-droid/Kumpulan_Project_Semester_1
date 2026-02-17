@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow jQuery Fade</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .slide {
+            display: none; /* Semua slide disembunyikan secara default */
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Slide pertama ditampilkan secara default */
+        .slide:first-child {
+            display: block;
+            position: relative; /* Slide pertama butuh posisi relatif agar container punya tinggi */
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+        <!-- Ganti src dengan path/URL gambar Anda -->
+        <img class="slide" src="https://tse2.mm.bing.net/th/id/OIP.k3L-ke7vZ33C06ZvOppUjAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gambar 1">
+        <img class="slide" src="https://tse2.mm.bing.net/th/id/OIP.k3L-ke7vZ33C06ZvOppUjAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gambar 2">
+        <img class="slide" src="https://tse2.mm.bing.net/th/id/OIP.k3L-ke7vZ33C06ZvOppUjAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gambar 3">
+    </div>
+
+    <div class="buttons">
+        <button id="prevBtn" class="btn">Sebelumnya</button>
+        <button id="nextBtn" class="btn">Berikutnya</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var slides = $('.slide');
+            var currentSlide = 0;
+            var slideInterval = 3000; // Opsional: otomatis geser setiap 3 detik
+            var fadeSpeed = 800; // Kecepatan efek fade dalam milidetik
+
+            // Fungsi untuk menampilkan slide tertentu
+            function showSlide(index) {
+                // Fade out slide saat ini, lalu sembunyikan sepenuhnya setelah efek selesai
+                slides.eq(currentSlide).fadeOut(fadeSpeed, function() {
+                    // Set slide baru sebagai slide saat ini
+                    currentSlide = index;
+                    // Fade in slide yang baru
+                    slides.eq(currentSlide).fadeIn(fadeSpeed);
+                });
+            }
+
+            // Fungsi untuk menampilkan slide berikutnya
+            $('#nextBtn').click(function() {
+                var nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            });
+
+            // Fungsi untuk menampilkan slide sebelumnya
+            $('#prevBtn').click(function() {
+                var prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            });
+            
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - FAQ Interaktif jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .faq-container {
+            margin-top: 20px;
+        }
+        .question {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    
+        .question-hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .answer {
+            background-color: #e9e9e9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: none; 
+        }
+        .arrow {
+            float: right;
+            transition: transform 0.3s;
+        }
+        .expanded .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ Interaktif</h1>
+
+    <div class="faq-container">
+        <div class="question" id="q1">
+            Apa itu jQuery? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            jQuery adalah pustaka JavaScript yang cepat, kecil, dan kaya fitur. Ini membuat hal-hal seperti penanganan HTML document traversal dan manipulasi, penanganan acara (event handling), animasi, dan Ajax menjadi jauh lebih sederhana dengan API yang mudah digunakan yang berfungsi konsisten di berbagai browser.
+        </div>
+
+        <div class="question" id="q2">
+         Bagaimana cara menggunakan .click() di jQuery? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            Metode .click() digunakan untuk melampirkan penangan acara "click" ke elemen HTML yang dipilih. Sintaks dasarnya adalah $("selector").click(function() { ... });.
+        </div>
+
+        <div class="question" id="q3">
+            Apa fungsi dari .toggle()? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            Metode .toggle() digunakan untuk menampilkan atau menyembunyikan elemen yang cocok. Jika elemen ditampilkan, elemen tersebut disembunyikan; jika disembunyikan, elemen tersebut ditampilkan. Ini sangat berguna untuk menu dropdown atau, seperti dalam kasus ini, jawaban FAQ.
+        </div>
+        
+        <div class="question" id="q4">
+            Apa perbedaan antara .hover() dan CSS :hover? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            CSS :hover murni untuk tujuan gaya visual sederhana. .hover() jQuery adalah fungsi pintasan untuk mengikat dua penangan acara: satu untuk mouseenter (saat masuk) dan satu lagi untuk mouseleave (saat keluar), memungkinkan Anda menjalankan logika JavaScript yang lebih kompleks (seperti menambahkan/menghapus kelas dinamis, bukan hanya mengubah warna) saat kursor masuk atau keluar.
+        </div>
+
+        <div class="question" id="q5">
+            Apakah jQuery masih relevan di tahun ini? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            Meskipun kerangka kerja JavaScript modern seperti React, Vue, dan Angular lebih populer untuk aplikasi kompleks, jQuery masih digunakan secara luas di jutaan situs web dan sangat relevan untuk proyek yang membutuhkan manipulasi DOM yang cepat dan sederhana tanpa beban kerangka kerja penuh.
+        </div>
+    <script src="script.js"></script>
+<div></div>
+</body>
+</html>
